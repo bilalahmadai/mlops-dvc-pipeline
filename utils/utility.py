@@ -14,7 +14,7 @@ def get_logger(name: str) -> logging.Logger:
     console_handler = logging.StreamHandler()
     console_handler.setLevel('DEBUG')
 
-    log_file_path = os.path.join(log_dir, 'data_ingestion.log')
+    log_file_path = os.path.join(log_dir, f'{name}.log')
     file_handler = logging.FileHandler(log_file_path)
     file_handler.setLevel('DEBUG')
 

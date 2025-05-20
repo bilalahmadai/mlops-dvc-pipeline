@@ -33,17 +33,17 @@ stages:
     - model_building.random_state
     outs:
     - models/model.pkl
-#   model_evaluation:
-#     cmd: python -m src.model_evaluation
-#     deps:
-#     - models/model.pkl
-#     - src/model_evaluation.py
-#     metrics:
-#     - reports/metrics.json
-# params:
-# - dvclive/params.yaml
-# metrics:
-# - dvclive/metrics.json
-# plots:
-# - dvclive/plots/metrics:
-#     x: step
+  model_evaluation:
+    cmd: python -m src.model_evaluation
+    deps:
+    - models/model.pkl
+    - src/model_evaluation.py
+    metrics:
+    - reports/metrics.json
+params:
+- dvclive/params.yaml
+metrics:
+- dvclive/metrics.json
+plots:
+- dvclive/plots/metrics:
+    x: step

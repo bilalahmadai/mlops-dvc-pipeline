@@ -6,3 +6,5 @@ scikit-learn==1.6.1
 matplotlib==3.10.3
 pandas==2.2.3
 dvc==3.59.2
+dvclive==3.48.2
+
